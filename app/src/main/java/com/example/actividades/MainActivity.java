@@ -1,16 +1,9 @@
 package com.example.actividades;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -20,13 +13,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_PERMISSION_CODE = 1;
@@ -101,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                 editor.putString("usuario", usuarioIngresado);
                 editor.putString("password", passwordIngresado);
                 editor.apply();
-                guardarRegistroEnArchivo(usuarioIngresado,passwordIngresado);
+
             }
             startActivity(intent);
         } else {
@@ -109,9 +97,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void guardarRegistroEnArchivo(String usuario, String password) {
-        Toast.makeText(this, usuario, Toast.LENGTH_SHORT).show();
-    }
+
 
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater menu_barra = getMenuInflater();
