@@ -42,6 +42,12 @@
             android:text="Rodriguez Baque Charlie" />
 
         <Button
+            android:id="@+id/btn_borrar_datos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Borrar datos" />
+
+        <Button
             android:id="@+id/btnSalir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
